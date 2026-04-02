@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CineCatálogo</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+<h1 class="name">CineCatálogo</h1>
+</header>
+
+<main>
+
+<h1>Filmes em Destaque</h1>
+
+<section class="filmes">
+
+<div class="card-filme" onclick="trocar(this)">
+<div class="imagem-filme">
+<img src="https://preview.redd.it/new-official-superman-2025-movie-promo-posters-v0-j4gqe7bbjqve1.jpg?width=988&format=pjpg&auto=webp&s=b097be59abc6e1e7663a5d42ccdbf4370cc384ed">
+</div>
+<p class="titulo-filme">Superman</p>
+<p class="data-filme">10/07/2025</p>
+<div class="descricao-filme">
+<iframe src="https://www.youtube.com/embed/Ox8ZLF6cGM0"></iframe>
+</div>
+</div>
+
+<div class="card-filme" onclick="trocar(this)">
+<div class="imagem-filme">
+<img src="https://m.media-amazon.com/images/I/91Ymp6snSLL.jpg">
+</div>
+<p class="titulo-filme">Deadpool e Wolverine</p>
+<p class="data-filme">25/07/2024</p>
+<div class="descricao-filme">
+<iframe src="https://www.youtube.com/embed/73_1biulkYk"></iframe>
+</div>
+</div>
+
+<div class="card-filme" onclick="trocar(this)">
+<div class="imagem-filme">
+<img src="https://m.media-amazon.com/images/M/MV5BZGZmM2UyMmUtYzNlMi00ZGVjLThhYWUtYjdhNmFlOTM4NDUyXkEyXkFqcGc@._V1_.jpg">
+</div>
+<p class="titulo-filme">Até o Último Homem</p>
+<p class="data-filme">26/01/2017</p>
+<div class="descricao-filme">
+<iframe src="https://www.youtube.com/embed/s2-1hz1juBI"></iframe>
+</div>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+<h1 class="name">CineCatálogo</h1>
+<p>Feito por ©Roberto Neyviton</p>
+</footer>
+
+<script>
+function trocar(card) {
+    const imagem = card.querySelector(".imagem-filme");
+    const titulo = card.querySelector(".titulo-filme");
+    const data = card.querySelector(".data-filme");
+    const descricao = card.querySelector(".descricao-filme");
+
+    const ativo = descricao.style.display === "block";
+
+    imagem.style.display = ativo ? "block" : "none";
+    titulo.style.display = ativo ? "block" : "none";
+    data.style.display = ativo ? "block" : "none";
+    descricao.style.display = ativo ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
